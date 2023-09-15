@@ -5,7 +5,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile('C:/Users/shawnwerber/Documents/g-sheet-test/views/form.html');;
+  res.sendFile('C:/Users/shawnwerber/Documents/g-sheet-test/views/form.html');
 });
 
 app.post("/post-sheet", async (req, res) => {
