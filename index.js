@@ -2,14 +2,13 @@ const express = require("express");
 const { google } = require("googleapis");
 
 const app = express();
-app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.sendFile('C:/Users/shawnwerber/Documents/g-sheet-test/views/form.html');;
 });
 
-app.post("/", async (req, res) => {
+app.post("/post-sheet", async (req, res) => {
   const { request, name } = req.body;
 
   const auth = new google.auth.GoogleAuth({
